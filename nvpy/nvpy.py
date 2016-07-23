@@ -400,7 +400,8 @@ class Controller:
             logging.debug("Trying to convert %s to html." % (key,))
             if HAVE_MARKDOWN:
                 logging.debug("Convert note %s to html." % (key,))
-                html = markdown.markdown(c)
+                html = markdown.markdown(c, ['markdown.extensions.extra', 'codehilite',
+                                'pymdownx.tasklist', 'pymdownx.progressbar'])
                 logging.debug("Convert done.")
 
             else:
@@ -415,6 +416,8 @@ class Controller:
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="./colorful.css">
+<link rel="stylesheet" type="text/css" href="./progress_bar.css">
 %s
 </head>
 <body>
@@ -608,7 +611,7 @@ class Controller:
         key = self.notes_list_model.list[self.selected_note_idx].key
         self.notes_db.delete_note_tag(key, evt.tag)
         self.view.cmd_notes_list_select()
-    
+
     def observer_view_add_tag(self, view, evt_type, evt):
         key = self.notes_list_model.list[self.selected_note_idx].key
         self.notes_db.add_note_tags(key, evt.tags)

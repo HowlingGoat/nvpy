@@ -1,3 +1,14 @@
+Modified build of nvPY with extended markdown support
+==========
+Add code highlighting and extra features via the markdown extensions. This makes it so it might break easier, and might not be as updated as the main nvPY branch or might even break completely down the line. Might never be updated, suggest using the main build over at https://github.com/cpbotha/nvpy
+
+* Adds support for the Python-Markdown Extra features, https://pythonhosted.org/Markdown/extensions/extra.html#python-markdown-extra
+And 2 extensions from PyMdown Extensions:
+* ProgressBar http://facelessuser.github.io/pymdown-extensions/extensions/progressbar/
+* Tasklist http://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
+
+For code highlighting to work and the progress bar to show up, the files inside the "extras" folder need to be added to '.nvpy' folder (same folder as the config file). These files where generated with pygments with something along the lines of ``pygmentize -f html -S colorful > colorful.css`` and progress_bar.css was modified from the file given in the documentation.
+
 ====
 nvPY
 ====
@@ -54,7 +65,7 @@ To install the latest development version from github, do::
 OR, to install the version currently on pypi, do::
 
     pip install nvpy
-    
+
 If already have nvpy installed, but you want to upgrade, try the following::
 
     sudo pip uninstall nvpy
@@ -86,7 +97,7 @@ are much faster as it uses the database it stores in your home directory.
 
 If you prefer to run from your git clone, you can just invoke python on nvpy.py, or on the nvpy package directory.
 
-The `example nvpy.cfg <https://github.com/cpbotha/nvpy/blob/master/nvpy/nvpy-example.cfg>`_ shows how you can configure the font 
+The `example nvpy.cfg <https://github.com/cpbotha/nvpy/blob/master/nvpy/nvpy-example.cfg>`_ shows how you can configure the font
 family and size, the widget theme (!) configure nvpy to save and load notes as clear text, disable simplenote syncing, and so forth.
 
 Making nvpy slightly less ugly on Linux
@@ -194,7 +205,7 @@ Bugs and feedback
 * Report bugs with `the github issue tracker <https://github.com/cpbotha/nvpy/issues>`_.
 * It's an even better idea to clone, fix and then send me a pull request.
 * If you have questions, or would like to discuss nvpy-related matters, please do so via the `nvpy google discussion group / mailing list <https://groups.google.com/d/forum/nvpy>`_.
-* If you really like nvpy, you could make me and you even happier by `tipping me with paypal <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BXXTJ9E97DG52>`_! 
+* If you really like nvpy, you could make me and you even happier by `tipping me with paypal <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BXXTJ9E97DG52>`_!
 
 Credits
 =======

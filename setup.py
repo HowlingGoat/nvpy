@@ -21,7 +21,7 @@ setup(
     packages=['nvpy'],
     long_description=read('README.rst'),
     # these are in reality not hard requirements of nvpy
-    install_requires=['Markdown', 'docutils'],
+    install_requires=['Markdown', 'docutils', 'pygments', 'pymdown-extensions',],
     entry_points={
         'gui_scripts': ['nvpy = nvpy.nvpy:main']
     },
