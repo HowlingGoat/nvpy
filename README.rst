@@ -7,7 +7,7 @@ And 2 extensions from PyMdown Extensions:
 * ProgressBar http://facelessuser.github.io/pymdown-extensions/extensions/progressbar/
 * Tasklist http://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
 
-For code highlighting to work and the progress bar to show up, the files inside the "extras" folder need to be added to '.nvpy' folder (same folder as the config file). These files where generated with pygments with something along the lines of ``pygmentize -f html -S colorful > colorful.css`` and progress_bar.css was modified from the file given in the documentation.
+For code highlighting to work and the progress bar to show up, the files inside the "extras" folder need to be added to '.nvpy' folder. These files where generated with pygments with something along the lines of ``pygmentize -f html -S colorful > colorful.css`` and progress_bar.css was modified from the file given in the documentation.
 
 ====
 nvPY
