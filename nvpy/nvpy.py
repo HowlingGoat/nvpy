@@ -417,7 +417,7 @@ class Controller:
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="stylesheet" type="text/css" href="./colorful.css">
-<link rel="stylesheet" type="text/css" href="./progress_bar.css">
+<link rel="stylesheet" type="text/css" href="./extra_css.css">
 %s
 </head>
 <body>
