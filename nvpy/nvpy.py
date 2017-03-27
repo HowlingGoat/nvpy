@@ -400,8 +400,8 @@ class Controller:
             logging.debug("Trying to convert %s to html." % (key,))
             if HAVE_MARKDOWN:
                 logging.debug("Convert note %s to html." % (key,))
-                html = markdown.markdown(c, ['markdown.extensions.extra', 'codehilite',
-                                'pymdownx.tasklist', 'pymdownx.progressbar'])
+                html = markdown.markdown(c, ['markdown.extensions.extra', 'markdown.extensions.toc',
+                    'codehilite', 'pymdownx.tasklist', 'pymdownx.progressbar',])
                 logging.debug("Convert done.")
 
             else:

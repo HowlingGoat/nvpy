@@ -210,3 +210,25 @@ blockquote {
   margin: 0 4px 0.25em -20px;
   vertical-align: middle;
 }
+
+
+/* TOC */
+.toc:before {
+  content: "Heading:";
+  font-size: 115%;
+  padding-left: 3;
+}
+
+.toc {
+  background-color: rgb(250,250,250);
+  padding: 0 5;
+  border: solid;
+  border-color: #CCC;
+  border-width: thin;
+  display: table;
+  padding: 10;
+}
+
+.toc li {
+  list-style-type: decimal;
+}
